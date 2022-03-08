@@ -1,0 +1,12 @@
+FROM arm32v7/python:3.7-slim-buster as build_env
+RUN apt-get update && apt-get install -y \
+    bluez \
+    dbus \
+    libbluetooth-dev \
+    gcc
+
+WORKDIR /home
+COPY . .
+RUN pip3 install -r requirements.txt
+
+CMD ["python3", "-u" , "./ble_scan_v12.py" ]

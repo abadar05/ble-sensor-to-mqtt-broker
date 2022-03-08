@@ -1,0 +1,16 @@
+{
+    "mqtt":{
+		"broker": "127.0.0.1",
+		"port": 1883,
+		"clean_session": true,
+		"keep_alive_sec": 60,
+		"topic": "/Moxa/BLE/uc3100"
+	},	
+	"ble_sensors":{
+		"maclist": ["E4:70:EF:EF:A1:D1", "F8:C5:87:F0:17:18"] 
+	},	
+	"ble_controller":{
+		"hci_device_id": 0,
+		"publish_all_ble_advertise": true     
+	}
+}

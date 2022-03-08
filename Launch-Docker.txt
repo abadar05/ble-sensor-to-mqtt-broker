@@ -1,0 +1,4 @@
+docker run --net=host --privileged {docker image name}
+
+# Example:
+docker run --net=host --privileged  amjadbadar05/mx-ble-mqtt:0.0.2-armhf
