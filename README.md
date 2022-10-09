@@ -21,8 +21,10 @@ Connect BLE sensors to local Mosquitto MQTT Broker. Current implementation read 
 - sudo docker container logs bluetooth 
 ![image](https://user-images.githubusercontent.com/22453359/194758698-3db21934-06f4-4881-9aea-5a2816ff9401.png)
 
-# start an interactive bash shell inside your running container
+# start an interactive bash shell inside your running container in order to change the configuration 
 sudo docker exec -it bluetooth "bash"
-
+  
+![image](https://user-images.githubusercontent.com/22453359/194760054-1f1f5f80-ab0b-403e-8ce7-a22c7ca4cd23.png)
+ 
 # Payload 
 ![image](https://user-images.githubusercontent.com/22453359/180788227-a2879895-5114-4010-b4de-94594d73d3cf.png)
