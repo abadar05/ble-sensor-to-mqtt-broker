@@ -12,7 +12,17 @@ Connect BLE sensors to local Mosquitto MQTT Broker. Current implementation read 
   
  - The --memory=<value> option specify maximum amount of memory the container can use. If you set this option, the minimum allowed value is 6m (6 megabytes). 
   
-  - sudo docker run -d --net=host --name bluetooth --privileged --cpus=".1" --memory="20m" amjadbadar05/mx-ble-mqtt:0.0.2-armhf
+  ```
+  sudo docker run -d \
+   --net=host \
+   --name bluetooth --privileged \
+   --cpus=".1" --memory="20m" \
+   --restart=always \
+   --log-driver json-file amjadbadar05/mx-ble-mqtt:0.0.4-armhf --ipv4="172.17.0.20"
+   
+     
+   ```
+
 
 - Verify conatiner is running
 ![image](https://user-images.githubusercontent.com/22453359/194758641-704e863d-4828-4897-8209-7811e41f4c42.png)
