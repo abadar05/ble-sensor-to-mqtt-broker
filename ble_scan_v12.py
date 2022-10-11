@@ -134,7 +134,7 @@ def main_argparse(assigned_args = None):
     #parser = argparse.ArgumentParser(prog="appcmd", description=globals()['__doc__'], epilog="!!Note: .....")
     parser = argparse.ArgumentParser()
     parser.add_argument("-c", dest="config_file", metavar="<Config File>. If not provided explicitly default config.json will be used", help="Configuration file to use!")
-    #parser.add_argument("-l", dest="file_level", metavar="File logging", type=int, action="store", default=None, help="Turn on file logging with level.")
+    parser.add_argument("--ipv4", dest="IP", metavar="<Broker IP>. Default ['127.0.0.1']", type=str, help="Overwrite Broker IP!")
     parser.add_argument("-v", "--verbose", dest="verbose_level", default=None, help="Turn on console DEBUG mode [-v 2]")
     parser.add_argument("-V", "--version", action="version", version=__version__) 
     return parser.parse_args(assigned_args)
