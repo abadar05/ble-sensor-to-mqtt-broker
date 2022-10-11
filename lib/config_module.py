@@ -75,8 +75,10 @@ class Config_BaseClass():
         # continue here 
         if self._ext_conf["mqtt"]["broker"]: 
             self._broker = self._ext_conf["mqtt"]["broker"]
+            if args.IP is not None:     #override IP from config file if comes via command line
+                 self._broker = args.IP
             logger.info("broker: {}".format(self._broker))
-            
+        
         if self._ext_conf["mqtt"]["port"]: 
             self._port = self._ext_conf["mqtt"]["port"]
             logger.info("port: {}".format(self._port))
