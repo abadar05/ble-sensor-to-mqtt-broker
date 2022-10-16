@@ -18,7 +18,7 @@ Connect BLE sensors to local Mosquitto MQTT Broker. Current implementation read 
    --name bluetooth --privileged \
    --cpus=".1" --memory="20m" \
    --restart=always \
-   --log-driver json-file amjadbadar05/mx-ble-mqtt:0.0.4-armhf --ipv4="172.17.0.20"
+   --log-driver json-file amjadbadar05/mx-ble-mqtt:0.0.4-armhf --ipv4="127.0.0.1"
    
      
    ```
