@@ -6,7 +6,7 @@ Connect BLE sensors to local Mosquitto MQTT Broker. Current implementation read 
   - sudo apt-get install mosquitto 
   - sudo systemctl status mosquitto
 
-# deploy container:
+## Deploy container via CLI:
 - The --cpus=<value> option specify how much of the available CPU resources a container can use. 
   Example the following command limit the container at most 10% of the CPU every second.
   
@@ -20,7 +20,11 @@ Connect BLE sensors to local Mosquitto MQTT Broker. Current implementation read 
    --restart=always \
    --log-driver json-file amjadbadar05/mx-ble-mqtt:0.0.4-armhf --ipv4="127.0.0.1"
    
-     
+   ```
+## Deploy container via docker-compose:
+```
+  docker-compose up -d 
+   
    ```
 
 
