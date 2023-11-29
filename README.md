@@ -1,8 +1,13 @@
 # moxaiiot-ble-mqtt-connector
-Connect BLE sensors to local Mosquitto MQTT Broker. Current implementation read BLE beacons in disconnected mode that means sensors do not need to connect to BLE controller all the time  
+Connect BLE sensors to local Mosquitto MQTT Broker. Current implementation read BLE beacons in disconnected mode that means sensors do not need to connect to BLE controller all the time. 
+The following BLE sensor essentim SPOT is integrated. In principle the source code can recieve ble sensor data from any other ble sensors as well. 
+https://essentim.com/en/essentim-sensors
+
+![image](https://github.com/abadar05/ble-to-mqtt-container/assets/22453359/faddefd8-f30c-4089-8748-da979bb8a83c)
+
 
 # Prequisites:
-- Local MQTT Broker running as docker container or systemd service 
+- Local MQTT Broker running as docker container or systemd service
   - sudo apt-get install mosquitto 
   - sudo systemctl status mosquitto
 
