@@ -1,13 +1,22 @@
 version: '3'
 
 services:
-  bluetooth:
-    image: amjadbadar05/mx-ble-mqtt:0.0.4-armhf
-    network_mode: host
-    privileged: true
-    cpus: 0.1
-    mem_limit: 20m
-    restart: always
-    logging:
-      driver: json-file
-    command: --ipv4="127.0.0.1"
+    mosquitto_broker:
+        image: eclipse-mosquitto
+        network_mode: host
+        ports:
+            - "1883:1883"
+            - "9001:9001"
+        container_name: mosquitto
+        restart: always
+        logging:
+            driver: "json-file"
+
+    bluetooth:
+        image: amjadbadar05/mx-ble-mqtt:0.0.4-armhf
+        network_mode: host
+        privileged: true
+        restart: always
+        logging:
+           driver: json-file
+        command: --ipv4=127.0.0.1
