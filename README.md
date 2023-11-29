@@ -22,18 +22,23 @@ Connect BLE sensors to local Mosquitto MQTT Broker. Current implementation read 
    
    ```
 ## Deploy container via docker-compose:
-```
-  docker-compose up -d 
-   
-   ```
+ ```
+  docker-compose up
+ ```
+- OUTPUT
+  As you can see bluetooth application is connected successfully to local mosquitto broker 
+![image](https://github.com/abadar05/ble-to-mqtt-container/assets/22453359/85845ba3-d051-4ba9-918e-891f553f3dab)
+ 
 
 
 - Verify conatiner is running
-![image](https://user-images.githubusercontent.com/22453359/194758641-704e863d-4828-4897-8209-7811e41f4c42.png)
+![image](https://github.com/abadar05/ble-to-mqtt-container/assets/22453359/e3476fa4-518a-41d2-a6b0-d3d2bbaf0ed9)
+
  
 - Verify container logs
 - sudo docker container logs bluetooth 
-![image](https://user-images.githubusercontent.com/22453359/194758698-3db21934-06f4-4881-9aea-5a2816ff9401.png)
+![image](https://github.com/abadar05/ble-to-mqtt-container/assets/22453359/a6fc818d-254b-4172-859a-729bc6b8bbd4)
+
 
 # start an interactive bash shell inside your running container in order to change the configuration 
 sudo docker exec -it bluetooth "bash"
